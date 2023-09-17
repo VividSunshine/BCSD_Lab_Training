@@ -1,0 +1,27 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    private void Awake()
+    {
+        bool result = false;
+        int x = 5, y = 2;
+
+        result = x > 2 && y != 5;
+        Debug.Log($"{x} > 2 && {y} != 5 = {result}");
+
+        result = x < 4 || y == 3;
+        Debug.Log($"{x} < 4 || {y} == 3 = {result}");
+
+        Debug.Log(result);
+        result = !result;
+        Debug.Log(result);
+
+        int hp = -10;
+        hp = hp < 0 ? 0 : hp;
+        Debug.Log("체력 : " + hp);
+    }
+}

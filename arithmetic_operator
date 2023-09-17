@@ -1,0 +1,22 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    private void Awake()
+    {
+        int a = 5 + 6;
+        int b = a - 3;
+        int c = a * b;
+        int d = c / 8;
+        int e = d % 4;
+
+        Debug.Log($"{a} = 5 + 6");
+        Debug.Log($"{b} = {a} - 3");
+        Debug.Log($"{c} = {a} * {b}");
+        Debug.Log($"{d} = {c} / 8");
+        Debug.Log($"{e} = {d} % 4");
+    }
+}

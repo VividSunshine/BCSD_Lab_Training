@@ -1,0 +1,19 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    private void Awake()
+    {
+        int minutes = 1;
+        int seconds = 15;
+
+        Debug.Log(string.Format("{0}{1}{2}", minutes, ":", seconds));
+        Debug.Log($"{minutes}:{seconds}");
+
+        Debug.Log(string.Format("{0,-10:D5}", minutes));
+        Debug.Log($"{minutes,-10:D5}");
+    }
+}

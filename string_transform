@@ -1,0 +1,37 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    private void Awake()
+    {
+        string str = "HELLO, WORLD";
+        Debug.Log(str);
+
+        str = str.ToLower();
+        Debug.Log($"ToLower() - {str}");
+
+        str = str.ToUpper();
+        Debug.Log($"ToUpper() - {str}");
+
+        str = str.Insert(0, "Hi~ ");
+        Debug.Log($"Insert() - {str}");
+
+        str = str.Remove(0, 4);
+        Debug.Log($"Remove() - {str}");
+
+        Debug.Log("== Trim ==");
+
+        str = "     " + str + "     ";
+        Debug.Log(str + "공백 체크");
+
+        str = str.Trim(); //앞뒤 공백 제거 앞 공백은 TrimStart, 뒤 공백은 TrimEnd
+        Debug.Log(str + "공백 체크");
+
+        Debug.Log($"Before Replace : {str}");
+        str = str.Replace("HELLO", "BYE");
+        Debug.Log($"After Replace : {str}");
+    }
+}

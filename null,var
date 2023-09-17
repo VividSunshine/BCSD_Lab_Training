@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    private void Awake()
+    {
+        int? intValue;
+
+        intValue = null;
+        Debug.Log(intValue.HasValue);
+
+        intValue = 30;
+        Debug.Log(intValue.HasValue);
+        Debug.Log(intValue.Value);
+
+        var valueInt = 33;
+        var valueFloat = 33.34567f;
+        var valueString = "문자열";
+
+        Debug.Log("정수 : " + valueInt);
+        Debug.Log("실수 : " + valueFloat);
+        Debug.Log("문자열 : " + valueString);
+    }
+}

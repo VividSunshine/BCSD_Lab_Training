@@ -1,0 +1,26 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    private void Awake()
+    {
+        int a = 10;
+        Debug.Log($"a = 10 : {a}");
+
+        a += 10;
+        Debug.Log($"a += 10 : 결과 값 {a}");
+
+        Debug.Log($"a -= 9 : 결과 값 {a -= 9}");
+        Debug.Log($"a *= 8: 결과 값 {a += 8}");
+        Debug.Log($"a /= 7: 결과 값 {a /= 7}");
+        Debug.Log($"a %= 6: 결과 값 {a %= 6}");
+        Debug.Log($"a &= 5: 결과 값 {a &= 5}");
+        Debug.Log($"a |= 4: 결과 값 {a |= 4}");
+        Debug.Log($"a ^= 3: 결과 값 {a ^= 3}");
+        Debug.Log($"a <<= 2: 결과 값 {a <<= 2}");
+        Debug.Log($"a >>= 1: 결과 값 {a >>= 1}");
+    }
+}

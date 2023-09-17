@@ -1,0 +1,36 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    [SerializeField]
+    private int x = 10;
+    private void Awake()
+    {
+        x /= 10;
+
+        switch ( x )
+        {
+            case 10:
+                Debug.Log("학점 : A+");
+                break;
+            case 9:
+                Debug.Log("학점 : A+");
+                break;
+            case 8:
+                Debug.Log("학점 : B+");
+                break;
+            case 7:
+                Debug.Log("학점 : C+");
+                break;
+            case 6:
+                Debug.Log("학점 : D");
+                break;
+            default:
+                Debug.Log("학점 : F");
+                break;
+        }
+    }
+}

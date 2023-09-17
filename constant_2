@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    enum PlayerState { Idle, Move, Attack }
+    private void Awake()
+    {
+        PlayerState playerState = PlayerState.Idle;
+
+        switch ( playerState )
+        {
+            case PlayerState.Idle:
+                Debug.Log("플레이어 상태 : 대기");
+                break;
+            case PlayerState.Move:
+                Debug.Log("플레이어 상태 : 이동");
+                break;
+            case PlayerState.Attack:
+                Debug.Log("플레이어 상태 :  공격");
+                break;
+        }
+    }
+}

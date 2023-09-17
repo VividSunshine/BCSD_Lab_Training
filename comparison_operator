@@ -1,0 +1,19 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    private void Awake()
+    {
+        int x = 5; int y = 2;
+
+        Debug.Log($"{x} > {y} = {x > y}");
+        Debug.Log($"{x} < {y} = {x < y}");
+        Debug.Log($"{x} >= {y} = {x >= y}");
+        Debug.Log($"{x} <= {y} = {x <= y}");
+        Debug.Log($"{x} == {y} = {x == y}");
+        Debug.Log($"{x} != {y} = {x != y}");
+    }
+}

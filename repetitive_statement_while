@@ -1,0 +1,23 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    [SerializeField]
+    private int x = 10;
+    private void Awake()
+    {
+        int result = 0;
+        int index = 1;
+
+        while (index <= 100)
+        {
+            result += index;
+            index++;
+        }
+
+        Debug.Log($"1부터 100까지의 합은 {result}");
+    }   
+}

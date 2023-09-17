@@ -1,0 +1,26 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    [SerializeField]
+    private int x = 10;
+    private void Awake()
+    {
+        int[][] array = new int[3][];
+
+        array[0] = new int[3] { 1, 2, 3 };
+        array[1] = new int[] { 10, 20, 30, 40 };
+        array[2] = new int[] { 100, 200, 300, 400, 500 };
+
+        for(int i = 0; i < array.Length; i++)
+        {
+            for(int j = 0; j < array[i].Length; j++)
+            {
+                Debug.Log($"[{i}][{j}] = {array[i][j]}");
+            }
+        }
+    }   
+}

@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    private void Awake()
+    {
+        sbyte sbyteValue = 31;
+        byte byteValue = (byte)sbyteValue;
+
+        Debug.Log("sbyteValue : " + sbyteValue);
+        Debug.Log("byteValue : " + byteValue);
+
+        sbyteValue = -31;
+        byteValue = (byte)sbyteValue;
+
+        Debug.Log("sbyteValue : " + sbyteValue);
+        Debug.Log("byteValue : " + byteValue);
+
+        byteValue = 200;
+        sbyteValue = (sbyte)byteValue;
+
+        Debug.Log("sbyteValue : " + sbyteValue);
+        Debug.Log("byteValue : " + byteValue);
+
+    }
+}

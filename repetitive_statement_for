@@ -1,0 +1,25 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    [SerializeField]
+    private int x = 10;
+    private void Awake()
+    {
+        for(int index = 0; index < 10; ++index)
+        {
+            Debug.Log(index);
+        }
+
+        for (int x = 1; x < 10; ++x)
+        {
+            for (int y = 1; y < 10; ++y)
+            {
+                Debug.Log($"{x} x {y} = {x * y}");
+            }
+        }
+    }
+}

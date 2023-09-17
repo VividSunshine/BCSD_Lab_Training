@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    private void Awake()
+    {
+        string stringValue = "초기화";
+        int intValue = 33;
+        float floatValue = 12.3456f;
+
+        Debug.Log("stringValue : " + stringValue);
+
+        stringValue = intValue.ToString();
+        Debug.Log("stringValue : " + stringValue);
+
+        stringValue = floatValue.ToString();
+        Debug.Log("stringValue : " + stringValue);
+    }
+}

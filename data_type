@@ -25,6 +25,5 @@ public class Test : MonoBehaviour
         Debug.Log("long Data : " + longValue);
         Debug.Log("ulong Data : " + ulongValue);
         Debug.Log("char Data : " + charValue);
-
     }
 }

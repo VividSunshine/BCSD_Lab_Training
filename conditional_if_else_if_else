@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    [SerializeField]
+    private int x = 10;
+    private void Awake()
+    {
+        if (x >= 90)
+        {
+            Debug.Log("학점 : A+");
+        }
+        else if (x >= 80)
+        {
+            Debug.Log("학점 : B+");
+        }
+        else if (x >= 70)
+        {
+            Debug.Log("학점 : C+");
+        }
+        else if (x >= 60)
+        {
+            Debug.Log("학점 : D");
+        }
+        else
+        {
+            Debug.Log("학점 : F");
+        }
+    }
+}
