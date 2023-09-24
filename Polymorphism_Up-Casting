@@ -1,0 +1,64 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class GameController : MonoBehaviour
+{
+    private void Awake()
+    {
+        Player player = new Player();
+
+        Enemy goblin = new Goblin();
+        Enemy slime = new Slime();
+        Enemy dragon = new Dragon();
+
+        player.Hit(goblin);
+        player.Hit(slime);
+        player.Hit(dragon);
+    }
+}
+
+public class Enemy
+{
+    public void TakeDamage(int damage)
+    {
+        Debug.Log($"적 {damage}");
+    }
+}
+
+public class Goblin : Enemy
+{
+    public void TakeDamage(int damage)
+    {
+        Debug.Log($"고블린 {damage}");
+    }
+}
+
+public class Slime : Enemy
+{
+    public void TakeDamage(int damage)
+    {
+        Debug.Log($"슬라임 {damage}");
+    }
+}
+
+public class Dragon : Enemy
+{
+    public void TakeDamage(int damage)
+    {
+        Debug.Log($"드래곤 {damage}");
+    }
+}
+
+public class Player : MonoBehaviour
+{
+    private int damage = 10;
+
+    public void Hit(Enemy enemy)
+    {
+        enemy.TakeDamage(damage);
+    }
+}

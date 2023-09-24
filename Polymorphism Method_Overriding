@@ -1,0 +1,45 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class Entity
+{
+    public virtual void Attack()
+    {
+        Debug.Log("공격");
+    }
+}
+
+public class GameController
+{
+    private Slime slime;
+    private Goblin goblin;
+
+    private void Awake()
+    {
+        Entity goblin = new Goblin();
+        Entity slime = new Slime();
+
+        slime.Attack();
+        goblin.Attack();
+    }
+}
+
+public class Slime : Entity
+{
+    public override void Attack()
+    {
+        Debug.Log("슬라임 공격");
+    }
+}
+
+public class Goblin : Entity
+{
+    public override void Attack()
+    {
+        Debug.Log("고블린 공격");
+    }
+}

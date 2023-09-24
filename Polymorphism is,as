@@ -1,0 +1,40 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Xml;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class Entity
+{
+    
+}
+
+public class Slime : Entity
+{
+
+}
+
+public class Goblin : Entity
+{
+
+}
+
+public class GameController : MonoBehaviour
+{
+    private void Awake()
+    {
+        Entity entity = new Slime();
+        if(entity is Slime)
+        {
+            Debug.Log("Entity type is Slime");
+        }
+
+        Goblin goblin = entity as Goblin;
+        if(goblin == null)
+        {
+            Debug.Log("goblin is null");
+        }
+    }
+}

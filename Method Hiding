@@ -1,0 +1,39 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Xml;
+using Unity.VisualScripting;
+using UnityEngine;
+
+
+public class Parent
+{
+    public void Method01()
+    {
+        Debug.Log("Parrent");
+    }
+}
+
+public class Child : Parent
+{
+    public new void Method01()
+    {
+        Debug.Log("Child");
+    }
+}
+
+public class GameController : MonoBehaviour
+{
+    private void Awake()
+    {
+        Parent p = new Parent();
+        p.Method01();
+
+        Child c = new Child();
+        c.Method01();
+
+        Parent pc = new Child();
+        pc.Method01();
+    }
+}

@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Xml;
+using Unity.VisualScripting;
+using UnityEngine;
+
+
+interface IMovingEntity
+{
+    void MoveTo(Vector3 destination);
+}
+
+public class Goblin : IMovingEntity
+{
+    public void MoveTo(Vector3 destination)
+    {
+        Debug.Log($"{destination}까지 이동");
+    }
+}
+
+public class GameController : MonoBehaviour
+{
+    private IMovingEntity goblin;
+
+    private void Awake()
+    {
+        goblin = new Goblin();
+
+        goblin.MoveTo(new Vector3(1,2,3));
+    }
+}

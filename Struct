@@ -1,0 +1,32 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Xml;
+using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
+using UnityEngine;
+
+
+public struct Stats
+{
+    public string ID;
+    public int currentHP;
+    public int damage;
+}
+
+public class GameController : MonoBehaviour
+{
+    private void Awake()
+    {
+        Stats player01 = new Stats();
+        Stats player02;
+
+        player02.ID = "나";
+        player02.currentHP = 100000;
+        player02.damage = 99999;
+
+        Debug.Log($"{player01.ID},{player01.currentHP},{player01.damage}");
+        Debug.Log($"{player02.ID},{player02.currentHP},{player02.damage}");
+    }
+}

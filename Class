@@ -1,0 +1,19 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+    private string ID = "고박사";
+    private int currentHP = 1000;
+
+    public void TakeDamage(int damage)
+    {
+        if (currentHP > damage)
+        {
+            currentHP -= damage;
+        }
+    }
+}

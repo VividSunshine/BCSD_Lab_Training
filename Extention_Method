@@ -1,0 +1,23 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+
+public static class StringExtention
+{
+    public static void PrintData(this string str)
+    {
+        Debug.Log(str);
+    }
+}
+
+public class GameController : MonoBehaviour
+{
+    private void Awake()
+    {
+        string str = "안녕하세요.";
+        str.PrintData();
+    }
+}

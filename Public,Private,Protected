@@ -1,0 +1,24 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class Player
+{
+    private string ID = ;
+    private int currentHP;
+
+    void RecoveryHP(int hp)
+    {
+        currentHP += hp;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if(currentHP>damage)
+        {
+            currentHP -= damage;
+        }
+    }
+}

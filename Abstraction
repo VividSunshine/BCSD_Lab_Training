@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Xml;
+using Unity.VisualScripting;
+using UnityEngine;
+
+
+public abstract class Entity
+{
+    protected int damage;
+    protected int currentHP;
+
+    public abstract void Attack(Entity target);
+    public void TakeDamage(int damage)
+    {
+        if(currentHP>damage)
+        {
+            currentHP -= damage;
+            Debug.Log($"체력 {damage} 감소");
+        }
+        else
+        {
+            Debug.Log("Die");
+        }
+    }
+}

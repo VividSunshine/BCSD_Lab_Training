@@ -1,0 +1,25 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    public void Awake()
+    {
+        Add(10, 20);
+        Add(173.2f, 57.3f);
+    }
+    public void Add(int num1,int num2)
+    {
+        int result = num1 + num2;
+        Debug.Log($"{num1} + {num2} = {result}");
+    }
+
+    public void Add(float num1,float num2)
+    {
+        float result = num1 + num2;
+        Debug.Log($"{num1} + {num2} = {result}");
+    }
+}
